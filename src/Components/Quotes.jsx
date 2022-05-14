@@ -22,7 +22,7 @@ function Quote(){
             } 
           }
         )();
-    },[quote]);
+    },[randomQuoteNumber]);
 
     return (
         <div className="quote-fix">

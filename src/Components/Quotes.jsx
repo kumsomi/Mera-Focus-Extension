@@ -22,7 +22,8 @@ function Quote(){
             } 
           }
         )();
-    },[randomQuoteNumber]);
+        // eslint-disable-next-line
+    },[]);
 
     return (
         <div className="quote-fix">

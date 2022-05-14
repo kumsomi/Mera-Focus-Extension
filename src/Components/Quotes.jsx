@@ -9,8 +9,7 @@ function Quote(){
 
     const quotesApi="https://type.fit/api/quotes";
     useEffect(()=>{
-        (
-            async () => {
+        (async () => {
             try {
               const res = await fetch(quotesApi);
               const { status, ...data } = await res.json();
@@ -21,8 +20,9 @@ function Quote(){
               console.log("Error while getting quotes: ", error);
               setQuote({ text: "Not able to fetch the quotes." });
             } 
-          })();
-    },[]);
+          }
+        )();
+    },[randomQuoteNumber]);
 
     return (
         <div className="quote-fix">

@@ -17,6 +17,7 @@ function Weather(){
     
       useEffect(() => {
         getUserLocation();
+      // eslint-disable-next-line
       }, []);
       const success = (position) => {
         getWeather(position.coords.latitude, position.coords.longitude);
@@ -54,20 +55,20 @@ function Weather(){
         <div>
             <h1>Weather</h1>
             <div className="weather">
-            <img
-                src={weatherInfo.icon}
-                alt="weather-icon"
-                className="weather-icon"
-            />
-            <div className="weather-details">
-                <div className="weather-temperature">
-                {weatherInfo.temperature} &deg;
+                <img
+                    src={weatherInfo.icon}
+                    alt="weather-icon"
+                    className="weather-icon"
+                />
+                <div className="weather-details">
+                    <div className="weather-temperature">
+                    {weatherInfo.temperature} &deg;
+                    </div>
+                    <div className="weather-location">
+                    {weatherInfo.location.name}, {weatherInfo.location.region} ,
+                    {weatherInfo.location.country}
+                    </div>
                 </div>
-                <div className="weather-location">
-                {weatherInfo.location.name}, {weatherInfo.location.region} ,
-                {weatherInfo.location.country}
-                </div>
-            </div>
             </div>
         </div>
     )

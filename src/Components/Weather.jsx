@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 
 function Weather(){
     const KEY="57269ffb86d244a0849150422221405";
-    const url="https://api.weatherapi.com/v1/current.json";
+    // const url="https://api.weatherapi.com/v1/current.json";
+    const url=process.env.REACT_APP_WEATHER_KEY
 
     const [weatherInfo, setWeatherInfo] = useState({
         location: {

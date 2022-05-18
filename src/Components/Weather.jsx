@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 function Weather(){
     const KEY= process.env.REACT_APP_WEATHER_KEY;
+    const key="57269ffb86d244a0849150422221405"
     const url="https://api.weatherapi.com/v1/current.json";
     // const url=process.env.REACT_APP_WEATHER_KEY
 
@@ -35,8 +36,8 @@ function Weather(){
       async function getWeather(latitude, longitude) {
         let apiReq = "";
         latitude && longitude
-        ? (apiReq = `${url}?key=${KEY}&q=${latitude},${longitude}&aqi=yes`)
-        : (apiReq = `${url}?key=${KEY}&q=Bangalore&aqi=yes`);
+        ? (apiReq = `${url}?key=${key}&q=${latitude},${longitude}&aqi=yes`)
+        : (apiReq = `${url}?key=${key}&q=Bangalore&aqi=yes`);
         try {
           const res = await axios.get(apiReq);
           setWeatherInfo({

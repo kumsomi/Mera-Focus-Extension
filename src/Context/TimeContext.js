@@ -1,11 +1,7 @@
 import { useState, createContext, useContext } from "react";
 
-const defaultTIme= new Date();
-const TimeContext = createContext(defaultTIme);
-
-const useTime = () => useContext(TimeContext);
-
-
+const defaultTime= new Date();
+const TimeContext = createContext(defaultTime);
 const newTime=new Date();
 
 //british time--> en-GB -->24hrs format
@@ -13,7 +9,7 @@ const nowTime = newTime.toLocaleTimeString("en-GB");
 const hr=Number(nowTime.slice(0,2));
 
 function changePartOfDay(){
-    //checking with the hour hand by taking the first 2 letters out 13:32:29 --> slice(0,2)
+    //checking with the hour hand by taking the first 2 letters out 13:32:29 --> slice(0,2)--> 13
     //5am to 12pm -> morning
     if(hr>=4 && hr<12){
         return "morning";
@@ -25,6 +21,7 @@ function changePartOfDay(){
         return "evening";
     }
     if(hr>=19 && hr>4){
+      console.log("night");
         return "night";
     }
 }
@@ -44,5 +41,8 @@ function changePartOfDay(){
           </TimeContext.Provider>
         );
       }
+
+      const useTime = () => useContext(TimeContext);
+
       
 export { TimeProvider, useTime };

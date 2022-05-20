@@ -26,9 +26,9 @@ function Quote(){
     },[]);
 
     return (
-        <div className="quote-fix">
-            <div>Quote:-{quote}</div>
-            <div>-{author}</div>
+        <div className="Quotes">
+            <p className="quote">{quote}</p>
+            <p className="author">-{author}</p>
         </div>
     )
 }

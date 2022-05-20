@@ -1,38 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,300;1,8..144,100;1,8..144,200&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; 
+  /* justify content centre to make the box centre vertically in y axis--> centre of the column  */
+  align-items: center; 
+  /* align items centre to make the box centre in x axis--> centre of the row  */
+  font-family: "Poppins", sans-serif;
+}
+
+main{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.main-bar{
+  padding: 2rem 0;
+  align-content: center;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-weight:bold;
+}
+
+.footer-bar{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 5rem;
+  padding: 2rem;
+  justify-content: center;
+}
+.greeting{
+  font-size: 2rem;
+}
+
+.quote{
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+}
+.author{
+  text-align: end;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.clock p{
+  font-size: 8rem;
+}
+.focus-input{
+  padding: 1rem;
+  color: white;
+  background-color: transparent;
+  border:0;
+  border-bottom: 2px solid var(--primary-color);
+  font-size: large;
+  text-align: center;
+}
+.focus-input::placeholder{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.focus-input:focus{
+  outline: none;
+}
+.focus-input:focus::placeholder{
+  color: transparent;
+}
+.floating-btn{
+  border: 0;
+  background-color: transparent;
+}
+.floating-btn:hover{
+  background-color: rgba(247, 241, 241, 0.5);
+  /* color:black; */
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.focus-check{
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem 0;
+}
+
+.focus-status{
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.focus-text{
+  margin:1rem;
+  font-size: 2rem;
+}
+.weather {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  text-align: right;
+  display: flex;
+}
+.weather-details{
+  /* font-size: 3rem; */
+  /* font-family: ; */
+  flex-direction: column;
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+.weather-temperature{
+font-size: 5rem;
+font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto Serif', serif;
+}
+.weather-location{
+  font-size: 2.5rem;
+}
+.focus-tab{
+  margin: 1rem;
+}
+.underline{
+  text-decoration: underline;
+  font-size: 3rem;
 }

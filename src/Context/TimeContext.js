@@ -14,14 +14,13 @@ function changePartOfDay(){
     if(hr>=4 && hr<12){
         return "morning";
     }
-    if(hr>=12 && hr<17){
+    if(hr>=12 && hr<16){
         return "afternoon";
     }
-    if(hr>=17 && hr<19){
+    if(hr>=16 && hr<19){
         return "evening";
     }
-    if(hr>=19 && hr>4){
-      console.log("night");
+    else {
         return "night";
     }
 }

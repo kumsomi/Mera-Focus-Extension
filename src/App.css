@@ -52,21 +52,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center; 
-  /* justify content centre to make the box centre vertically in y axis--> centre of the column  */
   align-items: center; 
-  /* align items centre to make the box centre in x axis--> centre of the row  */
   font-family: "Poppins", sans-serif;
   color: var(--primary-color);
 }
 
 main{
   display: flex;
-  background-color: rgba(0, 0, 0, 0.3);
-  /* font-family: 'Merriweather', serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Roboto Mono', monospace;
-font-family: 'Roboto Serif', serif; */
+  background-color: var(--background-color);
+
 }
 .main-bar{
   padding: 2rem;
@@ -86,7 +80,6 @@ font-family: 'Roboto Serif', serif; */
   background-color: transparent;
   border:0;
   border-bottom: 2px solid var(--primary-color);
-  /* font-size: large; */
   text-align: center;
 }
 .onboarding-input::placeholder{
@@ -115,7 +108,7 @@ font-family: 'Roboto Serif', serif; */
   padding: 1rem;
   font-size: 3rem;
   font-weight: 300;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--background-color);
   justify-content: center;
 }
 .author{
@@ -123,7 +116,7 @@ font-family: 'Roboto Serif', serif; */
   padding: 1rem;
   font-size: 2rem;
   font-weight: 400;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--background-color);
 }
 .clock p{
   font-size: 8rem;
@@ -154,7 +147,6 @@ font-family: 'Roboto Serif', serif; */
 }
 .floating-btn:hover{
   background-color: rgba(247, 241, 241, 0.5);
-  /* color:black; */
   cursor: pointer;
 }
 
@@ -165,7 +157,6 @@ font-family: 'Roboto Serif', serif; */
 }
 .focus-tab{
   margin: 1rem;
-  /* padding: 2rem; */
 }
 .focus-status{
   font-size: 1.5rem;
@@ -183,10 +174,7 @@ font-family: 'Roboto Serif', serif; */
   display: flex;
 }
 .weather-details{
-  /* font-size: 3rem; */
-  /* font-family: ; */
   flex-direction: column;
-  
   display: flex;
   flex-wrap: wrap;
 }

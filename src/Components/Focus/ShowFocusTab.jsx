@@ -6,7 +6,6 @@ export function ShowFocusTab(props){
 
     function editFocus() {
         localStorage.removeItem("todays-focus");
-        // window.location.reload(false);
     }
 
     return (

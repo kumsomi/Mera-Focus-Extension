@@ -5,7 +5,6 @@ export function FocusInput(){
     function saveFocus(e){
         if(e.key === "Enter"){
             localStorage.setItem("todays-focus", focus);
-            // window.location.reload(false);
         }
     }
     return(

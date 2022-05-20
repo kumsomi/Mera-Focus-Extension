@@ -10,17 +10,14 @@ function Greeting(){
     useEffect(() => {
         console.log(partOfDay);
         switch(partOfDay){
-            // case partOfDay==="morning"||partOfDay==="afternoon"||partOfDay==="evening":
             case 'morning':
             case 'afternoon':
             case 'evening':
             case 'night':
                 setGreeting(`Good ${partOfDay}`);
-                console.log(greeting);
                 break;
             default: 
             setGreeting("It was a good day, Have a Great Night");
-            console.log(greeting);
         }
     // eslint-disable-next-line 
     }, [partOfDay]);

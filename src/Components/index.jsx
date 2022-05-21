@@ -6,3 +6,5 @@ export { Weather } from "./Weather";
 export {Focus} from "./Focus/Focus";
 export {Home} from "./Home";
 export {GoogleLink} from "./GoogleLink";
+export {Logout} from "./Logout";
+export {Calendars} from "./Calendars";

@@ -1,4 +1,5 @@
-import {Clock, Greeting, Focus,Quote, Weather, GoogleLink} from "../Components/index"; 
+import {Clock, Greeting, Focus,Quote, Weather, GoogleLink, Logout} from "../Components/index"; 
+// import { Calendars } from "./Calendars";
 export function Home(){
     return(
         <div className="primary-color">
@@ -15,6 +16,8 @@ export function Home(){
           <Quote/>
         </main>
         <footer className="footer-bar">
+          <Logout/>
+          {/* <Calendars/> */}
         </footer>
       </div>
     );

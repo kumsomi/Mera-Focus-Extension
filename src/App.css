@@ -1,43 +1,5 @@
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,300;1,8..144,100;1,8..144,200&display=swap');
-
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,500&family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,300;1,8..144,100;1,8..144,200&display=swap');
 .App {
@@ -51,8 +13,6 @@
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; 
-  align-items: center;  */
   font-family: "Poppins", sans-serif;
   color: var(--primary-color);
 }
@@ -62,7 +22,6 @@ main{
   flex-direction: column;
 }
 .main-bar{
-
   padding: 2rem;
   align-content: center;
   flex-direction: column;
@@ -73,6 +32,14 @@ main{
   width: fit-content;
   margin: 2rem 0;
   align-self: center;
+}
+.onboarding{
+  background-color: var(--background-color);
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  padding: 6rem 2rem;
+  align-items: center;
 }
 
 .search-input{
@@ -98,6 +65,7 @@ main{
 }
 .onboarding-head{
   font-size: 5rem;
+  align-self: center;
 }
 .onboarding-input{
   font-size: 2.5rem;
@@ -119,11 +87,26 @@ main{
 }
 .footer-bar{
   display: flex;
-  flex-direction: row;
-  position: relative;
-  /* top: 5rem; */
+  flex-direction: column;
   padding: 2rem;
-  justify-content: center;
+}
+.logout{
+  display: flex;
+  flex-direction: row;
+}
+.calendar{
+  display: flex;
+  flex-direction: row;
+}
+.logout-menu{
+  font-size: 2.5rem;
+  padding: 1rem;
+  font-weight: 700;
+}
+.logout-menu:hover{
+  background-color: var(--hover-floating-btn);
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 .greeting{
   font-size: 3rem;
@@ -199,11 +182,15 @@ main{
   font-size: 2rem;
 }
 .header-bar{
+  padding: 2rem;
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
  justify-content: space-between;
 } 
+.footer-bar .floating-btn{
+  font-size: 4rem;
+}
 .searchbar .floating-btn{
   font-size: 2rem;
 }

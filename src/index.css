@@ -11,6 +11,7 @@ body {
 :root{
   --primary-color: white;
   --background-color: #0000004d;
+  --hover-floating-btn: #f7f1f180;
 }
 
 code {

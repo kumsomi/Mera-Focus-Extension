@@ -1,0 +1,24 @@
+{
+    "short_name": "Mera Focus",
+    "name": "Mera Focus",
+    "version": "1.0.1",
+    "manifest_version": 3,
+    "chrome_url_overrides" : {
+      "newtab": "public/index.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://*.google.com/*"],
+          "css": ["src/index.css", "src/app.css"],
+          "js": ["src/app.jsx"]
+        }
+      ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "permissions": [ 
+      "storage",
+      "tabs",
+      "notifications"
+   ]
+  }

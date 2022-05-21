@@ -1,17 +1,20 @@
-import {Clock, Greeting, Focus,Quote, Weather} from "../Components/index"; 
+import {Clock, Greeting, Focus,Quote, Weather, GoogleLink} from "../Components/index"; 
 export function Home(){
     return(
         <div className="primary-color">
-        <header className="header-bar">
+        <header className=" header-bar">
+          <GoogleLink/>
           <Weather/> 
         </header>
-        <main className="main-bar">
+        <main>
+          <div className="main-bar">
           <Clock/>
           <Greeting className="greeting"/>
           <Focus/>
+          </div>
+          <Quote/>
         </main>
         <footer className="footer-bar">
-          <Quote/>
         </footer>
       </div>
     );

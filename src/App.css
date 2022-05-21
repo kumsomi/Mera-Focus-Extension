@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,7 +35,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,300;1,8..144,100;1,8..144,200&display=swap');
 
 
@@ -51,24 +51,50 @@
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
+  /* justify-content: center; 
+  align-items: center;  */
   font-family: "Poppins", sans-serif;
   color: var(--primary-color);
 }
 
 main{
   display: flex;
-  background-color: var(--background-color);
-
+  flex-direction: column;
 }
 .main-bar{
+
   padding: 2rem;
   align-content: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-weight:bold;
+  background-color: var(--background-color);
+  width: fit-content;
+  margin: 2rem 0;
+  align-self: center;
+}
+
+.search-input{
+  width:80%;
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: transparent;
+  border:0;
+  border-bottom: 2px solid var(--primary-color);
+  text-align: center;
+}
+.search-input::placeholder{
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.search-input:focus{
+  outline: none;
+}
+.search-input:focus::placeholder{
+  color: transparent;
 }
 .onboarding-head{
   font-size: 5rem;
@@ -95,7 +121,7 @@ main{
   display: flex;
   flex-direction: row;
   position: relative;
-  top: 5rem;
+  /* top: 5rem; */
   padding: 2rem;
   justify-content: center;
 }
@@ -104,6 +130,12 @@ main{
   margin:2rem;
 }
 
+.Quotes{
+  width: fit-content;
+  justify-content: center;
+  align-self: center;
+
+}
 .quote{
   padding: 1rem;
   font-size: 3rem;
@@ -146,7 +178,7 @@ main{
   background-color: transparent;
 }
 .floating-btn:hover{
-  background-color: rgba(247, 241, 241, 0.5);
+  background-color: var(--hover-floating-btn);
   cursor: pointer;
 }
 
@@ -166,11 +198,21 @@ main{
   margin:1rem;
   font-size: 2rem;
 }
+.header-bar{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-between;
+} 
+.searchbar .floating-btn{
+  font-size: 2rem;
+}
+.searchbar{
+  display: flex;
+  align-items: flex-end;
+}
 .weather {
-  position: fixed;
-  right: 1rem;
-  top: 1rem;
-  text-align: right;
+  margin-left: auto;
   display: flex;
 }
 .weather-details{
@@ -179,7 +221,8 @@ main{
   flex-wrap: wrap;
 }
 .weather-temperature{
-font-size: 5rem;
+font-size: 4.5rem;
+font-weight: bolder;
 font-family: 'Merriweather', serif;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Raleway', sans-serif;

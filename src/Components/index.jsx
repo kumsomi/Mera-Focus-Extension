@@ -5,3 +5,4 @@ export { UserOnboarding } from "./UserOnboarding";
 export { Weather } from "./Weather";
 export {Focus} from "./Focus/Focus";
 export {Home} from "./Home";
+export {GoogleLink} from "./GoogleLink";

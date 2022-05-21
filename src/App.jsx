@@ -1,22 +1,25 @@
 import './App.css';
-import {Clock, Greeting, Focus,Quote, Weather, UserOnboarding} from "./Components/index"; 
+import {Home, UserOnboarding} from "./Components/index"; 
+import { useState, useEffect } from "react";
+import { useTheme } from "./Context/ThemeContext";
+
 
 function App() {
+  const [userState, setUserState] = useState(false);
+  
+  useEffect(() => {
+    const userName = localStorage.getItem("username");
+    setUserState(userName);
+  }, [userState]);
+
+  const { wallpaper } = useTheme();
   return (
-    <div>
-      <h1>Mera Focus</h1>
-      <header>
-        <Weather></Weather>    
-      </header>
-      <main>
-        <Clock></Clock>
-        <UserOnboarding></UserOnboarding>
-        <Greeting></Greeting>
-        <Focus></Focus>
-      </main>
-      <footer>
-        <Quote></Quote>
-      </footer>
+    <div className="App img-responsive"
+    style={{
+      backgroundImage: `url("${wallpaper}")`,
+    }}
+  >
+    { userState ? <Home/>:<UserOnboarding/>}
     </div>
   );
 }

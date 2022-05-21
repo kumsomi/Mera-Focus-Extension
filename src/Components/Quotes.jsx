@@ -5,7 +5,7 @@ function Quote(){
     const [author, setAuthor]=useState("");
 
     // this number will shuffle between the first n quotes and display any one among those n
-    const randomQuoteNumber = Math.floor(Math.random()*10);
+    const randomQuoteNumber = Math.floor(Math.random()*50);
 
     const quotesApi="https://type.fit/api/quotes";
     useEffect(()=>{
@@ -26,9 +26,9 @@ function Quote(){
     },[]);
 
     return (
-        <div className="quote-fix">
-            <div>Quote:-{quote}</div>
-            <div>-{author}</div>
+        <div className="Quotes">
+            <p className="quote">{quote}</p>
+            <p className="author">-{author}</p>
         </div>
     )
 }

@@ -7,13 +7,7 @@
   "chrome_url_overrides" : {
     "newtab": "index.html"
   },
-  "content_scripts": [
-      {
-        "matches": ["https://www.google.com/*"],
-        "css": ["../src/index.css", "../src/app.css"],
-        "js": ["../src/app.jsx"]
-      }
-    ],
+  
   "host_permissions": [
     "<all_urls>"
   ],

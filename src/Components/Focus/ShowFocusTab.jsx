@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MdModeEditOutline } from "react-icons/md";
 
 export function ShowFocusTab(props){
     const focusForToday = props.todaysFocus;
@@ -24,10 +25,10 @@ export function ShowFocusTab(props){
              I will {focusForToday}
             </span>
             <button className="floating-btn" onClick={editFocus}>
-            <span className="floating-btn-icon">
-                <i className="fas fa-pen"></i>
-            </span>
-        </button>
+                <span className="floating-btn-icon">
+                    <MdModeEditOutline/>
+                </span>
+            </button>
         </section>
         {focusStatus ? (
             <div className="focus-status">Yes, You did it</div>

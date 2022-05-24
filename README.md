@@ -1,5 +1,6 @@
 # Mera - focus Extensions
 This extension is published on firefox:- https://addons.mozilla.org/en-US/firefox/addon/mera-focus/
+
 Updated version(with some styling improvements and Todo feature) of this extension is loaded on netlify:- https://mera-focus-extension.netlify.app/
 
 

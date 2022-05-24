@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {AiTwotoneSetting} from "react-icons/ai";
 
 export function Logout(){
     const [logout, setLogout] = useState(false);
@@ -6,7 +7,7 @@ export function Logout(){
         <div className="logout">
             <button className="floating-btn"onClick={() => setLogout((prev) => !prev)}>
                 <span className="floating-btn-icon">
-                    <i className="fas fa-cog"></i>
+                <AiTwotoneSetting/>
                 </span>
             </button>
           {logout ? (

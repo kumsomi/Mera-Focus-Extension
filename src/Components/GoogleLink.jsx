@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import {FaSearch} from "react-icons/fa"
 export function GoogleLink(){
     const searchInput = useRef("");
     const [searchText, setSearchText] = useState("");
@@ -22,7 +23,8 @@ export function GoogleLink(){
             />
             <button className="floating-btn" type="submit">
             <span className="floating-btn-icon">
-              <i className="fas fa-search"></i>
+              {/* <i className="fas fa-search"></i> */}
+              <FaSearch/>
             </span>
             </button>
           </form>

@@ -1,4 +1,4 @@
-import {Clock, Greeting, Focus,Quote, Weather, GoogleLink, Logout} from "../Components/index"; 
+import {Clock, Greeting, Focus,Quote, Weather, GoogleLink, Logout, Todo} from "../Components/index"; 
 // import { Calendars } from "./Calendars";
 export function Home(){
     return(
@@ -13,10 +13,12 @@ export function Home(){
           <Greeting className="greeting"/>
           <Focus/>
           </div>
-          <Quote/>
+          {/* <Quote/> */}
         </main>
         <footer className="footer-bar">
           <Logout/>
+          <Quote/>
+          <Todo/>
           {/* <Calendars/> */}
         </footer>
       </div>

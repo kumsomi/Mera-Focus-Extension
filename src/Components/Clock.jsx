@@ -1,10 +1,11 @@
 import { useTime } from "../Context/TimeContext";
 
 function Clock(){
-    const {displayTime}=useTime();
+    const {displayTime, displayDate}=useTime();
     return (
-        <div className="clock">
-            <p>{displayTime}</p>
+        <div >
+            <p className="clock">{displayTime}</p>
+            <p className="date">{displayDate}</p>
         </div>
     )
 }

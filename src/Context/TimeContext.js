@@ -25,6 +25,7 @@ function changePartOfDay(){
     }
 }
     function TimeProvider({ children }) {
+        const [displayDate, setDisplayDate] = useState("");
         const [displayTime, setDisplayTime] = useState("");
         const [partOfDay, setPartOfDay] = useState(changePartOfDay);
       
@@ -32,10 +33,11 @@ function changePartOfDay(){
           const newTime = new Date();
           setDisplayTime(newTime.toLocaleTimeString("en-GB"));
           setPartOfDay(changePartOfDay());
+          setDisplayDate(newTime.toLocaleDateString("en-GB").replaceAll('/','-'));
         }, 1000);
       
         return (
-          <TimeContext.Provider value={{ displayTime, partOfDay }}>
+          <TimeContext.Provider value={{ displayTime, partOfDay, displayDate }}>
             {children}
           </TimeContext.Provider>
         );

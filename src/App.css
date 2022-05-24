@@ -16,7 +16,9 @@
   font-family: "Poppins", sans-serif;
   color: var(--primary-color);
 }
-
+.img-responsive{
+  border-radius: 0;
+}
 main{
   display: flex;
   flex-direction: column;
@@ -68,7 +70,7 @@ main{
   align-self: center;
 }
 .onboarding-input{
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 1rem;
   color: white;
   background-color: transparent;
@@ -87,42 +89,45 @@ main{
 }
 .footer-bar{
   display: flex;
-  flex-direction: column;
-  padding: 2rem;
-}
-.logout{
-  display: flex;
   flex-direction: row;
+  padding: 1rem;
+  justify-content: space-between;
 }
+
 .calendar{
   display: flex;
   flex-direction: row;
 }
 .logout-menu{
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 1rem;
   font-weight: 700;
+  margin: 1rem;
+  left: 1rem;
+  bottom: 4rem;
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--black);
+  border-radius: 0.5rem;
 }
 .logout-menu:hover{
-  background-color: var(--hover-floating-btn);
-  border-radius: 0.5rem;
   cursor: pointer;
 }
 .greeting{
   font-size: 3rem;
-  margin:2rem;
+  margin:1rem;
 }
 
 .Quotes{
   width: fit-content;
   justify-content: center;
   align-self: center;
-
+  padding: 1rem;
 }
 .quote{
   padding: 1rem;
-  font-size: 3rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 600;
   background-color: var(--background-color);
   justify-content: center;
 }
@@ -130,16 +135,18 @@ main{
   text-align: end;
   padding: 1rem;
   font-size: 2rem;
-  font-weight: 400;
-  background-color: var(--background-color);
+  font-weight: 600;
 }
-.clock p{
-  font-size: 8rem;
+.clock{
+  font-size: 6rem;
+}
+.date{
+  font-size: 2rem;
 }
 
 .focus-input{
   padding: 1rem;
-  color: white;
+  color: var(--primary-color);
   background-color: transparent;
   border:0;
   border-bottom: 2px solid var(--primary-color);
@@ -148,7 +155,7 @@ main{
   text-align: center;
 }
 .focus-input::placeholder{
-  color: white;
+  color: var(--primary-color);
 }
 .focus-input:focus{
   outline: none;
@@ -208,7 +215,7 @@ main{
   flex-wrap: wrap;
 }
 .weather-temperature{
-font-size: 4.5rem;
+font-size: 3rem;
 font-weight: bolder;
 font-family: 'Merriweather', serif;
   font-family: 'Open Sans', sans-serif;
@@ -216,7 +223,7 @@ font-family: 'Merriweather', serif;
   font-family: 'Roboto Serif', serif;
 }
 .weather-location{
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .focus-tab{
   margin: 1rem;
@@ -224,4 +231,78 @@ font-family: 'Merriweather', serif;
 .underline{
   text-decoration: underline;
   font-size: 3rem;
+}
+.strike {
+  text-decoration: line-through;
+}
+
+
+.todo-menu {
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--black);
+  height: fit-content;
+  /* width: 15rem;  */
+  right: 1rem;
+  bottom: 4rem;
+  padding: 1rem;
+  z-index: 1;
+  display: flex;
+  flex-flow: column;
+  border-radius: 1rem;
+}
+
+
+.todo-tasks {
+  display: flex;
+  flex-flow: column;
+  font-size: 2rem;
+  margin: auto;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.task-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-btn {
+  color: var(--black);
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+.close-btn:hover {
+  background-color: var(--background-color);
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-input {
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--black);
+}
+
+.todo-input:focus {
+  outline: none;
+}
+
+.add-button {
+  border: none;
+  background-color: var(--black);
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
 }

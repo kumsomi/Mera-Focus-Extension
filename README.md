@@ -3,6 +3,7 @@ This extension is published on firefox:- https://addons.mozilla.org/en-US/firefo
 
 Updated version(with some styling improvements and Todo feature) of this extension is loaded on netlify:- https://mera-focus-extension.netlify.app/
 
+Mera Focus is a broweser extension made to increase the productivity of the user. 
 
 It has following features:-
 - Takes user name as input and greet the user.

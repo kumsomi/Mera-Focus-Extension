@@ -4,15 +4,17 @@ import {FaClipboardList} from "react-icons/fa";
 import {ImCross} from "react-icons/im";
 export function Todo(){
     const todoInput = useRef("");
+    const [todoInputs, setTodoInputs] = useState("");
     const [todoTasks, setTodoTasks] = useState([]);
     const [todoDisplay, setTodoDisplay] = useState(false);
     function todoUpdate() {
-        todoInput.current.value &&
+
+        todoInput.current.value && todoInputs.trim()!=="" &&
           setTodoTasks([
             ...todoTasks,
             { _id: uuid(), name: todoInput.current.value, todoStrike: true },
           ]);
-          
+          setTodoInputs("");
     }
     return(
     <div> 
@@ -25,7 +27,7 @@ export function Todo(){
         {todoDisplay ? (
           <div className="todo-menu">
             <div className="todo-tasks">
-              {todoTasks !== [] &&
+              {todoTasks !== [] && 
                 todoTasks.map((item) => {
                   return (
                     <div className="task-list">
@@ -67,13 +69,15 @@ export function Todo(){
                 className="todo-input"
                 placeholder="Add todo"
                 ref={todoInput}
-                // value={todoTasks}
-                // onChange={(e)=>setTodoTasks(e.target.value)}
+                value={todoInputs}
+                onChange={(e)=>setTodoInputs(e.target.value)}
+                onKeyPress={(e)=>{if(e.key==="Enter"){todoUpdate();}}}
               />
               <button
                 className="add-button"
                 onClick={() => {
                   todoUpdate();
+                  
                 }}
               >
                 Add

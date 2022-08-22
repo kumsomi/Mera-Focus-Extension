@@ -18,10 +18,16 @@
 }
 .img-responsive{
   border-radius: 0;
+  opacity: 0.8;
 }
 main{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.grid-3col{
+  display: grid;
+  grid-template-rows: 15vh 70vh 15vh;
 }
 .main-bar{
   padding: 2rem;
@@ -92,6 +98,7 @@ main{
   flex-direction: row;
   padding: 1rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .calendar{
@@ -99,7 +106,7 @@ main{
   flex-direction: row;
 }
 .logout-menu{
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1rem;
   font-weight: 700;
   margin: 1rem;
@@ -109,10 +116,22 @@ main{
   background-color: var(--primary-color);
   color: var(--black);
   border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
 }
-.logout-menu:hover{
+.logout-cancel-btn{
+  background-color: black;
+  border-radius: 0.25rem;
+  color: white;
   cursor: pointer;
+  margin: 0 0 0 1rem;
 }
+
+.logout-menu-text:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .greeting{
   font-size: 3rem;
   margin:1rem;
@@ -189,14 +208,15 @@ main{
   font-size: 2rem;
 }
 .header-bar{
-  padding: 2rem;
+  padding: 1rem;
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
  justify-content: space-between;
+ align-items: center;
 } 
 .footer-bar .floating-btn{
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .searchbar .floating-btn{
   font-size: 2rem;
@@ -250,14 +270,19 @@ font-family: 'Merriweather', serif;
   display: flex;
   flex-flow: column;
   border-radius: 1rem;
+  /* overflow: scroll;
+  max-height: 20rem; */
 }
 
 
 .todo-tasks {
   display: flex;
   flex-flow: column;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: auto;
+  overflow-y: auto;
+    max-height: 20rem;
+    width: 100%;
 }
 
 .tasks {
@@ -289,7 +314,7 @@ font-family: 'Merriweather', serif;
 
 .todo-input {
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   border-bottom: 2px solid var(--black);
 }
@@ -302,7 +327,9 @@ font-family: 'Merriweather', serif;
   border: none;
   background-color: var(--black);
   color: var(--primary-color);
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 2rem;
   cursor: pointer;
+  margin: 0.5rem;
+
 }

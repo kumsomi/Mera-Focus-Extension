@@ -2,8 +2,8 @@ import {Clock, Greeting, Focus,Quote, Weather, GoogleLink, Logout, Todo} from ".
 // import { Calendars } from "./Calendars";
 export function Home(){
     return(
-        <div className="primary-color">
-        <header className=" header-bar">
+        <div className="primary-color grid-3col">
+        <header className="header-bar">
           <GoogleLink/>
           <Weather/> 
         </header>
@@ -17,7 +17,7 @@ export function Home(){
         </main>
         <footer className="footer-bar">
           <Logout/>
-          <Quote/>
+          {/* <Quote/> */}
           <Todo/>
           {/* <Calendars/> */}
         </footer>

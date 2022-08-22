@@ -12,6 +12,7 @@ export function Todo(){
             ...todoTasks,
             { _id: uuid(), name: todoInput.current.value, todoStrike: true },
           ]);
+          
     }
     return(
     <div> 
@@ -42,6 +43,7 @@ export function Todo(){
                             });
                             setTodoTasks(temp);
                           }}
+                          
                           checked={item.todoStrike ? false : true}
                         />
                         {item.name}
@@ -65,6 +67,8 @@ export function Todo(){
                 className="todo-input"
                 placeholder="Add todo"
                 ref={todoInput}
+                // value={todoTasks}
+                // onChange={(e)=>setTodoTasks(e.target.value)}
               />
               <button
                 className="add-button"
@@ -73,6 +77,8 @@ export function Todo(){
                 }}
               >
                 Add
+              </button>
+              <button className="add-button" onClick={() => setTodoDisplay((prev) => !prev)}>X
               </button>
               
             </div>

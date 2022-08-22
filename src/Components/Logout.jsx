@@ -11,14 +11,17 @@ export function Logout(){
                 </span>
             </button>
           {logout ? (
-            <div
-              className="logout-menu"
+            <div className="logout-menu">
+            <span
+              className="logout-menu-text"
               onClick={() => {
                 localStorage.removeItem("username");
                 window.location.reload(false);
               }}
             >
-              Change your name
+              Change your name 
+            </span>
+            <button className="logout-cancel-btn" onClick={() => setLogout((prev) => !prev)}>X</button>
             </div>
           ) : (
             ""
